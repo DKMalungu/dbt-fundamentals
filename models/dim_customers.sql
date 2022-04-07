@@ -1,10 +1,10 @@
 with customer as (
     select *
-    from {{ref(ref{{stg_customer}})}}
+    from {{ref('stg_customers')}}
 ),
      cutomer_order as(
          select
-         from ref{{stg_orders}}
+         from {{ref('stg_orders')}}
      ),
      customer_order as (
          select
