@@ -6,6 +6,13 @@ with customer as (
          select *
          from {{ref('stg_orders')}}
      ),
+     payment_details as(
+         select order_id,
+                sum(amount) as lifetime_value
+         from {{ref('stg_payments')}}
+         group by 1
+     )
+     ,
      customer_order as (
          select
                 customer_id,
@@ -22,9 +29,11 @@ with customer as (
                 c.last_name,
                 co.first_order_date,
                 co.most_recent_order_date,
-                co.number_of_orders
+                co.number_of_orders,
+                sd.lifetime_value
          from customer c
          inner join customer_order co using(customer_id)
+         inner join payment_details pd on pd.order_id = co.order_id
 
      )
 select * from final
