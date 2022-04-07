@@ -5,4 +5,4 @@ select
        status,
        amount,
        created
-from stripe_payments
+from {{source('jaffle_stripe','stripe_payments')}}
