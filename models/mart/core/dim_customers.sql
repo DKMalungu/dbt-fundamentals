@@ -30,7 +30,8 @@ with customer as (
                 co.first_order_date,
                 co.most_recent_order_date,
                 co.number_of_orders,
-                sd.lifetime_value
+                sd.lifetime_value,
+                pd.lifetime_value
          from customer c
          inner join customer_order co using(customer_id)
          inner join payment_details pd on pd.order_id = co.order_id
