@@ -16,11 +16,12 @@ with customer as (
      customer_order as (
          select
                 customer_id,
+                order_id,
                 min(order_date) as first_order_date,
                 max(order_date) as most_recent_order_date,
                 count(order_id) as number_of_orders
          from cutomer_order
-         group by 1
+         group by 1,2
      ),
      final as (
          select
@@ -30,7 +31,6 @@ with customer as (
                 co.first_order_date,
                 co.most_recent_order_date,
                 co.number_of_orders,
-                sd.lifetime_value,
                 pd.lifetime_value
          from customer c
          inner join customer_order co using(customer_id)
