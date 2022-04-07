@@ -2,8 +2,12 @@ version: 2
 
 source:
   - name: jaffle_shop
-    database: dbt_fundation
     schema: public
+    quoting:
+      database: false
+      schema: false
+      identifier: false
+      loader: stitch
     tables:
       - name: jaffle_shop_customers
       - name: jaffle_shop_orders
