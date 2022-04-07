@@ -1,16 +1,10 @@
 with customer as (
-    select id as customer_id,
-           first_name,
-           last_name
-    from jaffle_shop_customers
+    select *
+    from {{ref(ref{{stg_customer}})}}
 ),
      cutomer_order as(
          select
-                id as order_id,
-                user_id as customer_id,
-                order_date,
-                status
-         from jaffle_shop_orders
+         from ref{{stg_orders}}
      ),
      customer_order as (
          select
