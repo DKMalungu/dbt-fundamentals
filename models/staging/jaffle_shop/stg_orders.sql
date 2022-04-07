@@ -4,5 +4,5 @@ with cutomer_order as(
                 user_id as customer_id,
                 order_date,
                 status
-         from {{source('jaffle_shop', 'jaffle_shop_orders')}}jaffle_shop_orders)
+         from {{source('jaffle_shop', 'jaffle_shop_orders')}}
 select * from cutomer_order
