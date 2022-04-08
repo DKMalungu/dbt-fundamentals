@@ -23,3 +23,6 @@ models:
         tests:
           - accepted_values:
               values: ['placed','shipped', 'completed', 'returned', 'return_pending']
+          - relationships:
+              to: { { ref('stg_customers) } }
+              filed: customer_id
