@@ -22,4 +22,4 @@ models:
       - name: status
         tests:
           - accepted_values:
-              values: ['shipped', 'completed', 'returned', 'returned_pending']
+              values: ['placed','shipped', 'completed', 'returned', 'return_pending']
