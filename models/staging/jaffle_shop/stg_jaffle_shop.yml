@@ -20,5 +20,5 @@ models:
           - unique
           - not_null
       - name: status
-        test:
+        tests:
           - accpted_values: ['shipped', 'completed', 'returned', 'returned_pending']
