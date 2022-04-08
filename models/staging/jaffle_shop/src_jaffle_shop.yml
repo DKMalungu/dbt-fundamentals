@@ -10,8 +10,6 @@ sources:
     tables:
       - name: jaffle_shop_customers
       - name: jaffle_shop_orders
-<<<<<<< HEAD
-=======
 
 models:
   - name: stg_customers
@@ -28,4 +26,4 @@ models:
         test:
           - unique
           - not_null
->>>>>>> dad94f8ac36a7feab8ecc0b6a751e6fafff359a0
+
