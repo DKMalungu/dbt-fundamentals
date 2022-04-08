@@ -9,9 +9,7 @@ models:
           - not_null
       - name: first_name
         tests:
-          - unique
           - not_null
       - name: last_name
         tests:
-          - unique
           - not_null
