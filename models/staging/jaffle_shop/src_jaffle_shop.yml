@@ -11,13 +11,13 @@ sources:
       - name: jaffle_shop_customers
         columns:
           - name: id
-            test:
+            tests:
               - unique
               - not_null
       - name: jaffle_shop_orders
         columns:
           - name: id
-            test:
+            tests:
               - unique
               - not_null
 

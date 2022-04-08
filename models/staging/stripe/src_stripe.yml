@@ -11,6 +11,6 @@ sources:
       - name: stripe_payments
         columns:
           - name: id
-            test:
+            tests:
               - unique
               - not_null
