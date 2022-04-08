@@ -21,5 +21,5 @@ models:
           - not_null
       - name: status
         tests:
-          - accpted_values:
+          - accepted_values
               values: ['shipped', 'completed', 'returned', 'returned_pending']
