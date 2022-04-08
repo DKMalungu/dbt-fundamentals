@@ -13,3 +13,12 @@ models:
       - name: last_name
         tests:
           - not_null
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: status
+        test:
+          - accpted_values: ['shipped', 'completed', 'returned', 'returned_pending']
