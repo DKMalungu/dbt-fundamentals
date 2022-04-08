@@ -4,14 +4,14 @@ models:
   - name: stg_customers
     columns:
       - name: customer_id
-        test:
+        tests:
           - unique
           - not_null
       - name: first_name
-        test:
+        tests:
           - unique
           - not_null
       - name: last_name
-        test:
+        tests:
           - unique
           - not_null
