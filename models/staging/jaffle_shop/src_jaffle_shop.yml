@@ -1,13 +1,12 @@
 version: 2
-
-source:
-  - name: jaffle_shop
+sources:
+  - name: dbt_foundation
     schema: public
     quoting:
       database: false
       schema: false
       identifier: false
-      loader: stitch
+    loader: stitch
     tables:
       - name: jaffle_shop_customers
       - name: jaffle_shop_orders

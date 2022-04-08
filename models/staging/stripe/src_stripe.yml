@@ -1,12 +1,11 @@
 version: 2
-
-source:
+sources:
   - name: jaffle_stripe
     schema: public
     quoting:
       database: false
       schema: false
       identifier: false
-      loader: stitch
+    loader: stitch
     tables:
       - name: stripe_payments
