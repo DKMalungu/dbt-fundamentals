@@ -9,7 +9,17 @@ sources:
     loader: stitch
     tables:
       - name: jaffle_shop_customers
+        columns:
+          - name: id
+            test:
+              - unique
+              - not_null
       - name: jaffle_shop_orders
+        columns:
+          - name: id
+            test:
+              - unique
+              - not_null
 
 
 
