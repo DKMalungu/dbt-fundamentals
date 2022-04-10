@@ -1,0 +1,16 @@
+version: 2
+sources:
+  - name: jaffle_stripe
+    schema: public
+    quoting:
+      database: false
+      schema: false
+      identifier: false
+    loader: stitch
+    tables:
+      - name: stripe_payments
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
